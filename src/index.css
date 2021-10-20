@@ -1,4 +1,148 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@600;700&display=swap");
 * {
   margin: 0;
   padding: 0;
+  font-family: "Nunito", sans-serif;
+}
+:root {
+  --primary: #012970;
+  --secondary: #5061ff;
+  --font2: #444444;
+}
+body {
+  background: url("./Images/bg.svg") repeat-y;
+  background-size: contain;
+  background-position: 50px 0;
+}
+/* font-family: 'Nunito', sans-serif; */
+
+/* NAVBAR */
+.nav-bar {
+  padding: 20px 0;
+  /* border-bottom: 1px solid rgb(228, 228, 228); */
+  box-shadow: none;
+  position: sticky;
+  top: 0;
+  z-index: 3;
+  width: 100%;
+  background-color: transparent;
+  transition: all 0.5s;
+}
+.nav-bar-innercontainer {
+  display: flex;
+  width: 70%;
+  margin: auto;
+  font-family: "Nunito", sans-serif;
+  font-weight: 700;
+}
+.nav-logo {
+  display: flex;
+  font-size: 33px;
+  font-family: "Nunito", sans-serif;
+  align-items: center;
+  cursor: pointer;
+  opacity: 0.95;
+  transition: all 0.5s;
+  color: var(--primary);
+}
+.nav-bar-innercontainer ul {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  margin: 0 50px 0 auto;
+  font-size: 20px;
+}
+
+.nav-bar-innercontainer li {
+  margin-left: 30px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.nav-bar-innercontainer .option:hover {
+  color: var(--secondary);
+}
+
+.contact-button {
+  background-color: var(--secondary);
+  padding: 10px 20px;
+  line-height: 100%;
+  color: white;
+  border-radius: 5px;
+}
+
+.scrolled .nav-bar {
+  background-color: white;
+  box-shadow: 0px 2px 20px rgb(1 41 112 / 10%);
+  padding: 10px 0;
+}
+
+/* HERO */
+.hero {
+  min-height: 100vh;
+  font-family: "Nunito", sans-serif;
+}
+
+.hero .inner-hero {
+  display: flex;
+  width: 70%;
+
+  height: 500px;
+  box-sizing: border-box;
+  /* padding-left: 300px; */
+  /* padding-right: 300px; */
+  margin: 120px auto 0;
+}
+.hero .text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* max-width: 50%; */
+}
+.hero .text-container {
+  max-width: 80%;
+}
+.hero .title {
+  font-size: 50px;
+  line-height: 95%;
+  color: var(--primary);
+}
+.hero .subtitle {
+  font-size: 28px;
+  color: var(--font2);
+  font-weight: normal;
+  margin: 20px 0 30px 0;
+  opacity: 0.8;
+}
+.hero img {
+}
+.hero-button {
+  background-color: #5061ff;
+  padding: 22px 45px;
+  width: fit-content;
+  color: rgb(255, 255, 255);
+  font-size: 18px;
+  border-radius: 5px;
+  letter-spacing: 1px;
+  font-weight: bolder;
+  box-shadow: 0px 5px 30px rgb(65 84 241 / 40%);
+  line-height: 0;
+  cursor: pointer;
+}
+
+/* Footer */
+.footer-container {
+  width: 100%;
+  border-top: 1px solid rgb(235, 235, 235);
+  background-color: white;
+  height: 60px;
+}
+.footer {
+  width: 70%;
+  margin: 0 auto;
+  text-align: center;
+  padding: 20px 0;
+}
+.footer p {
+  color: var(--font2);
+  opacity: 0.9;
 }
