@@ -15,12 +15,12 @@ function Header() {
   window.addEventListener("scroll", scrolled);
   function changed() {
     if (!darkMode) {
-      document.querySelector(":root").style.setProperty("--white", "#444444");
-      document.querySelector(":root").style.setProperty("--font2", "white");
+      // document.querySelector(":root").style.setProperty("--white", "#444444");
+      // document.querySelector(":root").style.setProperty("--font2", "white");
       document.body.classList.add("dark-mode");
     } else {
-      document.querySelector(":root").style.setProperty("--white", "white");
-      document.querySelector(":root").style.setProperty("--font2", "#444444");
+      // document.querySelector(":root").style.setProperty("--white", "white");
+      // document.querySelector(":root").style.setProperty("--font2", "#444444");
       document.body.classList.remove("dark-mode");
     }
   }

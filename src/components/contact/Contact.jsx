@@ -7,7 +7,8 @@ import phone from "../../Images/phone.svg";
 import website from "../../Images/website.svg";
 import address from "../../Images/address.svg";
 
-import "./contact.css";
+import "./Contact.css";
+import Meeting from "../Meeting/Meeting";
 
 const REQUEST_BASE_URL = process.env.REACT_APP_REQUEST_BASE_URL;
 
@@ -170,7 +171,6 @@ class Contact extends Component {
     const state = this.state;
 
     let isValid = true;
-    // const data = new Object();
     const data = {};
 
     for (let field in state) {
@@ -183,7 +183,6 @@ class Contact extends Component {
     }
 
     if (isValid) {
-      console.log(REQUEST_BASE_URL);
       Axios.post(`${REQUEST_BASE_URL}/api/recieve_message`, { data }).then(
         (response) => {
           if (!response.data.success) {
@@ -215,17 +214,7 @@ class Contact extends Component {
             <this.SubmitButton />
           </div>
           <div className="map" style={{ width: 400 }}>
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d14000.187006548898!2d77.08240309007525!3d28.68824806267908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1sen!2sin!4v1634745977975"
-              style={{
-                width: "100%",
-                height: "100%",
-                border: "none",
-                outline: "none",
-              }}
-              loading="lazy"
-              title="title"
-            ></iframe>
+            <Meeting />
           </div>
         </div>
         <this.InfoSection />

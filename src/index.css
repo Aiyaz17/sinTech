@@ -9,12 +9,16 @@
   --secondary: #5061ff;
   --white: white;
   --font2: #444444;
+  --dark-black: #282828;
+  --dark-secondary: #4664e6;
+  /* --dark-primary: ; */
 }
 body {
   background: url("./Images/bg.svg") repeat-y;
   background-size: contain;
   background-position: 100px -80px;
   background-color: var(--white);
+  transition: all 0.5s;
 }
 /* font-family: 'Nunito', sans-serif; */
 
@@ -51,6 +55,7 @@ body {
   transition: all 0.5s;
   color: var(--primary);
 }
+
 .nav-bar-innercontainer ul {
   list-style: none;
   display: flex;
@@ -304,14 +309,8 @@ body {
 *:before {
   box-sizing: border-box;
 }
-/* body {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-} */
+
 .toggle input[type="checkbox"] {
-  /* visibility: hidden; */
   display: none;
 }
 .toggle input[type="checkbox"]:checked + label {
@@ -319,41 +318,107 @@ body {
   background-color: #000;
 }
 .toggle input[type="checkbox"]:checked + label:before {
-  transform: translateX(30px);
+  transform: translateX(33px);
   background-color: #fff;
 }
 .toggle label {
   display: flex;
-  /* width: 180px;
-  height: 90px;
-  border: 6px solid; */
   width: 60px;
-  height: 30px;
+  height: 25px;
   border: 3px solid;
   border-radius: 99em;
   position: relative;
   transition: transform 0.75s ease-in-out;
   transform-origin: 50% 50%;
   cursor: pointer;
+
+  transition: all 0.5s;
 }
-label:before {
+.toggle label:before {
   transition: transform 0.75s ease;
   transition-delay: 0.5s;
   content: "";
   display: block;
-  position: absolute;
+  position: relative;
   /* width: 54px; */
   /* width: 17px; */
-  width: 15px;
+  width: 13px;
   /* height: 54px; */
-  height: 15px;
-  background-color: #000;
+  height: 13px;
   border-radius: 50%;
-  top: 5px;
-  left: 5px;
+  background-color: #000;
+  top: 3px;
+  left: 4px;
+  transition: all 0.5s;
 }
+/* Dark mode */
 .dark-mode .toggle label {
   border: 3px solid white;
 }
-/* label:before {
-} */
+
+body.dark-mode {
+  background-color: #111111;
+}
+
+.dark-mode .nav-logo {
+  color: var(--dark-secondary);
+  transition: all 0.5s;
+}
+.dark-mode .contact-button {
+  transition: all 0.5s;
+  color: white;
+}
+.dark-mode .nav-bar-innercontainer ul {
+  color: var(--white);
+  transition: all 0.5s;
+}
+.dark-mode .nav-bar.scrolled {
+  background-color: var(--dark-black);
+  transition: all 0.5s;
+}
+
+.dark-mode .hero .title {
+  color: var(--dark-secondary);
+  transition: all 0.5s;
+}
+.dark-mode .hero .subtitle {
+  color: var(--white);
+  transition: all 0.5s;
+  opacity: 0.8;
+}
+.dark-mode .container-title {
+  transition: all 0.5s;
+  color: var(--dark-secondary);
+}
+.dark-mode .vertical-card {
+  background-color: #242526;
+  transition: all 0.5s;
+}
+.dark-mode .card-text h1 {
+  transition: all 0.5s;
+  color: white;
+}
+.dark-mode .card-text p {
+  color: white;
+  opacity: 0.5;
+  transition: all 0.5s;
+}
+.dark-mode .footer-container {
+  background-color: var(--dark-black);
+  border-top: 1px solid black;
+  transition: all 0.5s;
+}
+.dark-mode .footer p {
+  color: white;
+  opacity: 0.8;
+  transition: all 0.5s;
+}
+/* swiper-pagination-bullet-active */
+.dark-mode .swiper-pagination-bullet {
+  transition: all 0.5s;
+  background: #dbdbdb;
+}
+.dark-mode .swiper-pagination-bullet-active {
+  transition: all 0.5s;
+  background: var(--dark-secondary);
+}
