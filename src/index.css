@@ -7,12 +7,14 @@
 :root {
   --primary: #012970;
   --secondary: #5061ff;
+  --white: white;
   --font2: #444444;
 }
 body {
   background: url("./Images/bg.svg") repeat-y;
   background-size: contain;
-  background-position: 50px 0;
+  background-position: 100px -80px;
+  background-color: var(--white);
 }
 /* font-family: 'Nunito', sans-serif; */
 
@@ -21,19 +23,23 @@ body {
   padding: 20px 0;
   /* border-bottom: 1px solid rgb(228, 228, 228); */
   box-shadow: none;
-  position: sticky;
+  position: fixed;
   top: 0;
   z-index: 3;
   width: 100%;
   background-color: transparent;
   transition: all 0.5s;
+  display: flex;
+  align-items: center;
 }
 .nav-bar-innercontainer {
   display: flex;
-  width: 70%;
+  /* width: 70%; */
+  width: 100%;
   margin: auto;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
+  margin: 0 10% 0 15%;
 }
 .nav-logo {
   display: flex;
@@ -49,8 +55,9 @@ body {
   list-style: none;
   display: flex;
   align-items: center;
-  margin: 0 50px 0 auto;
+  margin: 0 0 0 auto;
   font-size: 20px;
+  color: var(--font2);
 }
 
 .nav-bar-innercontainer li {
@@ -66,12 +73,13 @@ body {
   background-color: var(--secondary);
   padding: 10px 20px;
   line-height: 100%;
-  color: white;
+  color: var(--white);
   border-radius: 5px;
+  width: fit-content;
 }
 
-.scrolled .nav-bar {
-  background-color: white;
+.nav-bar.scrolled {
+  background-color: var(--white);
   box-shadow: 0px 2px 20px rgb(1 41 112 / 10%);
   padding: 10px 0;
 }
@@ -85,12 +93,9 @@ body {
 .hero .inner-hero {
   display: flex;
   width: 70%;
-
   height: 500px;
   box-sizing: border-box;
-  /* padding-left: 300px; */
-  /* padding-right: 300px; */
-  margin: 120px auto 0;
+  margin: 210px auto 0;
 }
 .hero .text {
   display: flex;
@@ -113,13 +118,13 @@ body {
   margin: 20px 0 30px 0;
   opacity: 0.8;
 }
-.hero img {
-}
+
 .hero-button {
-  background-color: #5061ff;
+  /* background-color: #5061ff; */
+  background-color: var(--secondary);
   padding: 22px 45px;
   width: fit-content;
-  color: rgb(255, 255, 255);
+  color: var(--white);
   font-size: 18px;
   border-radius: 5px;
   letter-spacing: 1px;
@@ -133,8 +138,9 @@ body {
 .footer-container {
   width: 100%;
   border-top: 1px solid rgb(235, 235, 235);
-  background-color: white;
+  background-color: var(--white);
   height: 60px;
+  margin: 300px 0 0;
 }
 .footer {
   width: 70%;
@@ -146,3 +152,208 @@ body {
   color: var(--font2);
   opacity: 0.9;
 }
+
+/* Services  */
+
+.services-container {
+  width: 100%;
+}
+.services {
+  max-width: 65%;
+  height: max-content;
+  margin: 0 auto;
+  cursor: grab;
+  position: relative;
+}
+/* card  */
+.vertical-card {
+  width: 360px;
+  height: fit-content;
+  /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
+  box-shadow: 0px 0 30px rgb(0 0 0 / 10%);
+  /* border-bottom: 1px solid rgb(228, 228, 228); */
+
+  border-radius: 10px;
+  margin: 0 20px;
+  padding: 30px 10px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s;
+  background-color: var(--white);
+}
+
+.vertical-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0px 0 10px rgb(0 0 0 / 10%);
+}
+.card-img {
+  display: flex;
+  max-height: 280px;
+  margin: 0 auto;
+}
+.card-text {
+  text-align: center;
+  margin: auto;
+  width: 90%;
+}
+.card-text h1 {
+  white-space: nowrap;
+  margin-top: 30px;
+  font-size: 25px;
+  opacity: 0.8;
+}
+.card-text p {
+  margin-top: 20px;
+  line-height: 170%;
+  font-size: 17px;
+  opacity: 0.65;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 4;
+  -webkit-box-orient: vertical;
+}
+.container-title {
+  font-size: 50px;
+  line-height: 95%;
+  color: var(--primary);
+  text-align: center;
+}
+.more-items {
+  font-size: 15px;
+  margin: 20px 20px 0 auto;
+  display: flex;
+  justify-content: right;
+  align-items: center;
+  transition: all 0.3s;
+}
+.more-items span {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin-left: 10px;
+}
+.more-items:hover {
+  box-shadow: 0px 1px 10px rgb(0 0 0 / 20%);
+}
+/* .items {
+  width: 120px;
+  list-style: none;
+  text-align: center;
+  position: fixed;
+  background-color: white;
+  padding: 20px 5px 0px;
+  opacity: 0;
+  right: 40px;
+  z-index: 100;
+  max-height: 200px;
+  height: fit-content;
+  overflow: scroll;
+  font-size: 14px;
+  transition: all 0.3s;
+}
+.items::-webkit-scrollbar {
+  width: 12px;
+}
+
+.items li {
+  text-overflow: ellipsis;
+  overflow-x: hidden;
+  opacity: 1;
+  margin: 10px;
+} */
+
+/* Swiper */
+
+.swiper-container {
+  transition: 1s;
+  transition: all 1s;
+  padding: 80px 0 70px;
+}
+
+.swiper-slide {
+  transform: scale(0.8);
+  transition: all 0.5s;
+  display: flex;
+  justify-content: center;
+  z-index: 1;
+  /* filter: blur(0.1px); */
+  border-radius: 10px;
+}
+.swiper-slide-active .vertical-card:hover {
+  transform: scale(1);
+}
+.swiper-slide-active {
+  transform: scale(1);
+  transition: all 0.5s;
+  z-index: 3;
+  /* filter: blur(0); */
+  border-radius: 10px;
+}
+.swiper-slide-active:hover {
+  transform: scale(1);
+}
+
+/* Toggle */
+.toggle {
+  margin-right: 100px;
+}
+
+*,
+*:after,
+*:before {
+  box-sizing: border-box;
+}
+/* body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+} */
+.toggle input[type="checkbox"] {
+  /* visibility: hidden; */
+  display: none;
+}
+.toggle input[type="checkbox"]:checked + label {
+  transform: rotate(180deg);
+  background-color: #000;
+}
+.toggle input[type="checkbox"]:checked + label:before {
+  transform: translateX(30px);
+  background-color: #fff;
+}
+.toggle label {
+  display: flex;
+  /* width: 180px;
+  height: 90px;
+  border: 6px solid; */
+  width: 60px;
+  height: 30px;
+  border: 3px solid;
+  border-radius: 99em;
+  position: relative;
+  transition: transform 0.75s ease-in-out;
+  transform-origin: 50% 50%;
+  cursor: pointer;
+}
+label:before {
+  transition: transform 0.75s ease;
+  transition-delay: 0.5s;
+  content: "";
+  display: block;
+  position: absolute;
+  /* width: 54px; */
+  /* width: 17px; */
+  width: 15px;
+  /* height: 54px; */
+  height: 15px;
+  background-color: #000;
+  border-radius: 50%;
+  top: 5px;
+  left: 5px;
+}
+.dark-mode .toggle label {
+  border: 3px solid white;
+}
+/* label:before {
+} */
