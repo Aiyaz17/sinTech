@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { withAlert } from "react-alert";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope,faPhoneAlt,faGlobe,faMapMarker } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhoneAlt,
+  faGlobe,
+  faMapMarker,
+} from "@fortawesome/free-solid-svg-icons";
 
 // import message from "../../Images/message.svg";
 // import phone from "../../Images/phone.svg";
@@ -217,6 +222,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="contact_container">
+        {window.scrollTo({ top: 0, behavior: "smooth" })}
         <div className="contact_detail_container">
           <div className="contact">
             <p className="contact_us_header">Contact Us</p>
@@ -224,19 +230,29 @@ class Contact extends Component {
             <this.SubmitButton />
             <div className="contact-info">
               <div className="contact-info-email contact-info-child">
-                <h1> <FontAwesomeIcon icon={faEnvelope} /></h1>
+                <h1>
+                  {" "}
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </h1>
                 <p>sinplay@gmail.com</p>
               </div>
               <div className="contact-info-phone-number contact-info-child">
-                 <h1><FontAwesomeIcon icon={faPhoneAlt} /></h1>
-                 <p>+91 987654321</p>
+                <h1>
+                  <FontAwesomeIcon icon={faPhoneAlt} />
+                </h1>
+                <p>+91 987654321</p>
               </div>
               <div className="contact-info-website contact-info-child">
-               <h1> <FontAwesomeIcon icon={faGlobe} /></h1>
+                <h1>
+                  {" "}
+                  <FontAwesomeIcon icon={faGlobe} />
+                </h1>
                 <p>https://sinplay.com</p>
               </div>
               <div className="contact-info-address contact-info-child">
-                 <h1 className="location-icon"><FontAwesomeIcon icon={faMapMarker} /></h1>
+                <h1 className="location-icon">
+                  <FontAwesomeIcon icon={faMapMarker} />
+                </h1>
                 <p>Laxmi Nagar, New Delhi, India 11001</p>
               </div>
             </div>

@@ -351,9 +351,10 @@ textarea {
   color: red !important;
 }
 .schedule-header {
-  font-size: 25px;
-  margin-top: 8px;
+  /* font-size: 35px; */
+  /* margin-top: 8px; */
   margin-bottom: 38px;
+  white-space: nowrap;
 }
 .contact-info-child {
   display: flex;
@@ -405,6 +406,7 @@ textarea {
   margin-right: 10px;
   user-select: none;
 }
+
 /* ------------------ dark-mode --------------- */
 
 .dark-mode .contact_detail_container {

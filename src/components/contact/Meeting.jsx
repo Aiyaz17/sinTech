@@ -149,7 +149,7 @@ class Meeting extends Component {
       <div className="meeting_container">
         <div className="meeting_header">
           <p className="contact_us_header schedule-header">
-            Schedule a meeting
+            Schedule a Meeting
           </p>
           <p className="meeting_description">Please Select a date</p>
         </div>
