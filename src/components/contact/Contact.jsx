@@ -1,43 +1,48 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { withAlert } from "react-alert";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faEnvelope,faPhoneAlt,faGlobe,faMapMarker } from '@fortawesome/free-solid-svg-icons'
 
-import message from "../../Images/message.svg";
-import phone from "../../Images/phone.svg";
-import website from "../../Images/website.svg";
-import address from "../../Images/address.svg";
-
+// import message from "../../Images/message.svg";
+// import phone from "../../Images/phone.svg";
+// import website from "../../Images/website.svg";
+// import address from "../../Images/address.svg";
+// import email from "../../Images/email.png";
+// import phone from "../../Images/phone.png";
+// import website from "../../Images/website.png";
+// import location from "../../Images/location.png";
 import "./Contact.css";
 import Meeting from "../Meeting/Meeting";
 
 const REQUEST_BASE_URL = process.env.REACT_APP_REQUEST_BASE_URL;
 
-const info = [
-  {
-    head: "Address",
-    image: address,
-    text: "Laxmi Nagar, New Delhi, India 110012",
-    href: "",
-  },
-  {
-    head: "Phone",
-    image: phone,
-    text: "+91 1234567890",
-    href: "tel:1234567890",
-  },
-  {
-    head: "Email",
-    image: message,
-    text: "sinplay@sinplaymail.com",
-    href: "sinplay@sinplaymail.com",
-  },
-  {
-    head: "Website",
-    image: website,
-    text: "sinplay.com",
-    href: "https://sinplay.com",
-  },
-];
+// const info = [
+//   {
+//     head: "Address",
+//     image: address,
+//     text: "Laxmi Nagar, New Delhi, India 110012",
+//     href: "",
+//   },
+//   {
+//     head: "Phone",
+//     image: phone,
+//     text: "+91 1234567890",
+//     href: "tel:1234567890",
+//   },
+//   {
+//     head: "Email",
+//     image: message,
+//     text: "sinplay@sinplaymail.com",
+//     href: "sinplay@sinplaymail.com",
+//   },
+//   {
+//     head: "Website",
+//     image: website,
+//     text: "sinplay.com",
+//     href: "https://sinplay.com",
+//   },
+// ];
 
 class Contact extends Component {
   constructor(props) {
@@ -69,6 +74,7 @@ class Contact extends Component {
               type="text"
               value={name}
               onChange={(e) => this.changeInput(e)}
+              placeholder="Full Name"
             />
             <label>PHONE</label>
             <input
@@ -77,6 +83,7 @@ class Contact extends Component {
               max="50"
               value={phone}
               onChange={(e) => this.changeInput(e)}
+              placeholder="Phone Number"
             />
           </p>
           <p>
@@ -87,6 +94,7 @@ class Contact extends Component {
               max="50"
               value={company}
               onChange={(e) => this.changeInput(e)}
+              placeholder="Company Name"
             />
             <label>EMAIL</label>
             <input
@@ -94,6 +102,7 @@ class Contact extends Component {
               type="email"
               value={email}
               onChange={(e) => this.changeInput(e)}
+              placeholder="Email"
             />
           </p>
         </div>
@@ -103,31 +112,32 @@ class Contact extends Component {
             id="about"
             value={this.state.about}
             onChange={(e) => this.changeInput(e)}
+            placeholder="Message"
           />
         </p>
       </div>
     );
   }
 
-  InfoSection() {
-    return (
-      <div className="contact_info_container">
-        {info.map((v, i) => (
-          <div className="contact_info_content">
-            <div className="content_image">
-              <img src={v.image} alt="" />
-            </div>
-            <p className="content_details">
-              <b>{v.head}: </b>{" "}
-              <a style={{ textDecoration: "none" }} href={v.href}>
-                {v.text}
-              </a>
-            </p>
-          </div>
-        ))}
-      </div>
-    );
-  }
+  // InfoSection() {
+  //   return (
+  //     <div className="contact_info_container">
+  //       {info.map((v, i) => (
+  //         <div className="contact_info_content">
+  //           <div className="content_image">
+  //             <img src={v.image} alt="" />
+  //           </div>
+  //           <p className="content_details">
+  //             <b>{v.head}: </b>{" "}
+  //             <a style={{ textDecoration: "none" }} href={v.href}>
+  //               {v.text}
+  //             </a>
+  //           </p>
+  //         </div>
+  //       ))}
+  //     </div>
+  //   );
+  // }
 
   SubmitButton() {
     return (
@@ -212,12 +222,28 @@ class Contact extends Component {
             <p className="contact_us_header">Contact Us</p>
             <this.Details />
             <this.SubmitButton />
+            <div className="contact-info">
+              <div className="contact-info-email contact-info-child">
+                <h1> <FontAwesomeIcon icon={faEnvelope} /></h1>
+                <p>sinplay@gmail.com</p>
+              </div>
+              <div className="contact-info-phone-number contact-info-child">
+                 <h1><FontAwesomeIcon icon={faPhoneAlt} /></h1>
+                 <p>+91 987654321</p>
+              </div>
+              <div className="contact-info-website contact-info-child">
+               <h1> <FontAwesomeIcon icon={faGlobe} /></h1>
+                <p>https://sinplay.com</p>
+              </div>
+              <div className="contact-info-address contact-info-child">
+                 <h1 className="location-icon"><FontAwesomeIcon icon={faMapMarker} /></h1>
+                <p>Laxmi Nagar, New Delhi, India 11001</p>
+              </div>
+            </div>
           </div>
-          <div className="map" style={{ width: 400 }}>
-            <Meeting />
-          </div>
+          <Meeting />
         </div>
-        <this.InfoSection />
+        {/* <this.InfoSection /> */}
       </div>
     );
   }

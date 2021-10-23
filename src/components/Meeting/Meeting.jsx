@@ -5,7 +5,8 @@ import moment from "moment";
 import { withAlert } from "react-alert";
 
 import "react-datetime/css/react-datetime.css";
-import "./Meeting.css";
+// import "./Meeting.css";
+import "../contact/Contact";
 
 const REQUEST_BASE_URL = process.env.REACT_APP_REQUEST_BASE_URL;
 
@@ -147,7 +148,9 @@ class Meeting extends Component {
     return (
       <div className="meeting_container">
         <div className="meeting_header">
-          <p className="meeting_heading">Schedule a meeting</p>
+          <p className="contact_us_header schedule-header">
+            Schedule a meeting
+          </p>
           <p className="meeting_description">Please Select a date</p>
         </div>
         <div className="meeting_details">
