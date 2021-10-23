@@ -3,10 +3,10 @@ import Axios from "axios";
 import Datetime from "react-datetime";
 import moment from "moment";
 import { withAlert } from "react-alert";
-
 import "react-datetime/css/react-datetime.css";
-// import "./Meeting.css";
 import "./contact.css";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 
 const REQUEST_BASE_URL = process.env.REACT_APP_REQUEST_BASE_URL;
 
@@ -191,14 +191,15 @@ class Meeting extends Component {
             />
           </div>
           <div className="meeting_guest">
-            <p style={{ textAlign: "center" }}>
-              Add guests: &nbsp;&nbsp;
+            <p>
               <button
+                id="add"
                 className="add_guest_button"
                 onClick={this.createGuestInput}
               >
-                +
+                <FontAwesomeIcon icon={faPlus} />
               </button>
+              <label for="add"> Add guests </label>
             </p>
             <input
               type="text"

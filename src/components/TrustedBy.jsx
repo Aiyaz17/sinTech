@@ -18,6 +18,25 @@ import "swiper/swiper.esm";
 SwiperCore.use([Navigation, Autoplay, EffectCoverflow, Pagination]);
 function TrustedBy() {
   var logos = [logo1, logo2, logo3, logo4, logo5];
+  var breakpoints = {
+    1024: {
+      slidesPerView: 5,
+      spaceBetween: 40,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    640: {
+      slidesPerView: 1,
+      spaceBetween: 20,
+    },
+    320: {
+      slidesPerView: 1,
+      spaceBetween: 10,
+    },
+  };
+
   return (
     <div className="trusted-container">
       <h1 className="container-title">Trusted By</h1>
@@ -33,6 +52,7 @@ function TrustedBy() {
           speed={500}
           autoHeight={false}
           grabCursor={true}
+          breakpoints={breakpoints}
         >
           {logos.map((logo) => (
             <SwiperSlide>

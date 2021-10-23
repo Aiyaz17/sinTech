@@ -2,7 +2,7 @@ import React from "react";
 import heroImage from "../Images/hero-img-min.png";
 function Hero() {
   return (
-    <div className="hero">
+    <div className="hero" id="hero">
       <div className="inner-hero">
         <div className="text">
           <div className="text-container">

@@ -30,8 +30,8 @@ function App() {
             <div>
               <Hero />
               <Services />
-              <TrustedBy />
               <About />
+              <TrustedBy />
               <Footer />
             </div>
           </Route>

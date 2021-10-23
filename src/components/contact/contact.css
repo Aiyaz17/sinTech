@@ -1,6 +1,6 @@
 * {
   font-family: "Nunito", sans-serif;
-  transition:all 0.3s;
+  transition: all 0.75s;
 }
 :root {
   --primary: #012970;
@@ -20,7 +20,7 @@
 }
 
 .contact_detail_container {
-  margin-top: 120px;
+  margin: 120px 30px 0;
   padding: 30px 0;
   display: flex;
   justify-content: center;
@@ -66,9 +66,9 @@
 }
 
 .contact .contact_details .about {
-  width: 94%;
-  padding: 0% 2%;
-  margin-top: 0;
+  width: 92%;
+  /* padding: 0% 2%; */
+  margin: 0 auto 0 0;
 }
 
 .contact .contact_details p label,
@@ -79,6 +79,7 @@
   font-size: 12px;
   font-weight: bolder;
   display: none;
+  transition: all 0.75s;
 }
 
 /* .contact .contact_details .contact_info p input { */
@@ -152,7 +153,6 @@ textarea {
   outline: none;
   border: none;
   margin-top: 30px;
-  transition: all 0.3s;
 }
 .contact .contact_button .submit_button:hover {
   box-shadow: 0px 5px 10px rgb(65 84 241 / 40%);
@@ -261,9 +261,9 @@ textarea {
   font-size: 13px;
   border-bottom: solid 1px #a3a2a2;
 } */
-.meeting_guest {
+/* .meeting_guest {
   display: none;
-}
+} */
 
 /* .meeting_container .meeting_details .meeting_info textarea {
   width: 90%;
@@ -295,7 +295,6 @@ textarea {
   line-height: 0;
   cursor: pointer;
   margin-top: 30px;
-  transition: all 0.3s;
 }
 .meeting_container .meeting_submit:hover {
   box-shadow: 0px 5px 10px rgb(65 84 241 / 40%);
@@ -304,7 +303,7 @@ textarea {
 .meeting_container .meeting_submit:active {
   transform: scale(0.9);
 }
-.meeting_container .meeting_details p .add_guest_button {
+/* .meeting_container .meeting_details p .add_guest_button {
   width: 20px;
   background-color: #457ccf !important;
   border-radius: 10px;
@@ -314,7 +313,7 @@ textarea {
   align-content: center;
   text-align: center;
   font-weight: 800;
-}
+} */
 
 .rdtPicker {
   font-size: 13px !important;
@@ -360,14 +359,14 @@ textarea {
   display: flex;
 }
 .contact-info-child h1 {
-  font-size:30px;
+  font-size: 30px;
 }
-.location-icon{
-  margin-left:6px;
+.location-icon {
+  margin-left: 6px;
 }
 .contact-info {
   margin: 60px 0 0 20px;
-  margin: 40px auto;
+  margin: 80px auto;
 }
 .contact-info div {
   margin: 30px 0;
@@ -380,34 +379,94 @@ textarea {
   font-size: 17px;
   cursor: pointer;
 }
+.meeting_guest p {
+  font-size: 16px;
+  font-weight: 800;
+  opacity: 0.9;
+  text-align: left;
+  width: 96%;
+  margin: 10px auto 20px !important;
+}
+.meeting_guest input {
+  border: none;
+  width: 96%;
+  border-bottom: solid 2px #c8c8c8;
+  padding: 5px 0;
+}
+.meeting_guest input:focus {
+  outline: none;
+}
+.add_guest_button {
+  cursor: pointer;
+  outline: none;
+  border: none;
+  font-size: 20px;
+  background-color: transparent;
+  margin-right: 10px;
+  user-select: none;
+}
+/* ------------------ dark-mode --------------- */
 
-.dark-mode .contact_detail_container{
-  background-color:#242526;
+.dark-mode .contact_detail_container {
+  background-color: #242526;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 0px;
 }
-.dark-mode .contact-info-child h1,.dark-mode .contact-info p {
-  color:white;
+.dark-mode .contact-info-child h1,
+.dark-mode .contact-info p {
+  color: white;
 }
-.dark-mode .contact .contact_details .contact_info p input,.dark-mode .meeting_info input,.dark-mode textarea{
-  background-color:#242526 !important;
-  color:white;
-  opacity:1;
+.dark-mode .contact .contact_details .contact_info p input,
+.dark-mode .meeting_info input,
+.dark-mode .meeting_guest input,
+.dark-mode textarea {
+  background-color: #242526 !important;
+  color: white;
+  opacity: 1;
 }
-.dark-mode .contact .contact_details .contact_info p input:focus,.dark-mode .meeting_info input:focus,.dark-mode textarea:focus{
-  background-color:#242526;
-  color:white;
+.dark-mode .contact .contact_details .contact_info p input::placeholder,
+.dark-mode .meeting_info input::placeholder,
+.dark-mode .meeting_guest input::placeholder,
+.dark-mode textarea::placeholder {
+  color: white;
+  opacity: 0.7;
+}
+.dark-mode .contact .contact_details .contact_info p input:focus,
+.dark-mode .meeting_info input:focus,
+.dark-mode .meeting_guest input:focus,
+.dark-mode textarea:focus {
+  background-color: #242526;
+  color: white;
   /* opacity:1; */
 }
-.dark-mode .contact_us_header{
-  color:var(--dark-secondary);
+.dark-mode .contact_us_header {
+  color: var(--dark-secondary);
 }
-.dark-mode .rdtPicker{
-  background-color:#242526;
+.dark-mode .rdtPicker {
+  background-color: #242526;
 }
-.dark-mode .meeting_description,.dark-mode .rdtSwitch{
-  color:white;
-  opacity:0.8;
+.dark-mode .meeting_description,
+.dark-mode .rdtSwitch {
+  color: white;
+  opacity: 0.8;
 }
-.dark-mode .rdtCount,.dark-mode .rdtDay,.dark-mode .rdtNext,.dark-mode .rdtPrev{
-  color:white;
+.dark-mode .rdtCount,
+.dark-mode .rdtDay,
+.dark-mode .rdtNext,
+.dark-mode .rdtPrev {
+  color: white;
+}
+
+.meeting_guest label {
+  cursor: pointer;
+  user-select: none;
+}
+.dark-mode .meeting_guest p,
+.add_guest_button {
+  color: white;
+}
+.dark-mode .dow:nth-child(1) {
+  color: rgb(246, 105, 105) !important;
+}
+.dark-mode .dow:nth-child(7) {
+  color: rgb(246, 105, 105) !important;
 }

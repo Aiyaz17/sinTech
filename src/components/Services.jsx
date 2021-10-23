@@ -12,16 +12,6 @@ import "swiper/swiper.esm";
 import VerticalCard from "./VerticalCard";
 import randomImg from "../Images/hero-img-min.png";
 SwiperCore.use([Navigation, Autoplay, EffectCoverflow, Pagination]);
-// var cards = [
-//   "slide 1",
-//   "slide 2",
-//   "slide 3",
-//   "slide 4",
-//   "slide 4",
-//   "slide 4",
-//   "slide 4",
-//   "slide 4",
-// ];
 
 function Services() {
   const swiperRef = useRef(null);
@@ -36,24 +26,13 @@ function Services() {
     );
   }
 
-  // function cardHovered() {
-  //   Swiper.autoplay.start();
-  // }
-  // function cardUnHovered() {
-  //   Swiper.autoplay.end();
-  // }
-  //  };
-  //   var allCards = document.querySelectorAll(".vertical-card");
-  //   allCards.map((card) => card.addEventListener("mouseover", cardHovered));
-  //   allCards.map((card) => card.addEventListener("mouseout", cardUnHovered));
-
   var breakpoints = {
     1024: {
       slidesPerView: 3,
       spaceBetween: 40,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 30,
     },
     640: {

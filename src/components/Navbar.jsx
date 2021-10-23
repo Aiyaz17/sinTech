@@ -15,12 +15,8 @@ function Header() {
   window.addEventListener("scroll", scrolled);
   function changed() {
     if (!darkMode) {
-      // document.querySelector(":root").style.setProperty("--white", "#444444");
-      // document.querySelector(":root").style.setProperty("--font2", "white");
       document.body.classList.add("dark-mode");
     } else {
-      // document.querySelector(":root").style.setProperty("--white", "white");
-      // document.querySelector(":root").style.setProperty("--font2", "#444444");
       document.body.classList.remove("dark-mode");
     }
   }
@@ -36,9 +32,34 @@ function Header() {
           </p>
         </Link>
         <ul className="options">
-          <li className="option">Home</li>
-          <li className="option">Our Services</li>
-          <li className="option">About</li>
+          <li
+            onClick={() => {
+              window.scrollTo({ top: 0, behavior: "smooth" });
+            }}
+            className="option"
+          >
+            Home
+          </li>
+          <li
+            onClick={() => {
+              document
+                .querySelector(".services-container")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            className="option"
+          >
+            Our Services
+          </li>
+          <li
+            onClick={() => {
+              document
+                .querySelector(".about-container")
+                .scrollIntoView({ behavior: "smooth" });
+            }}
+            className="option"
+          >
+            About
+          </li>
           <Link to="/contact" style={{ textDecoration: "none" }}>
             <li className="contact-button">Contact Us</li>
           </Link>
