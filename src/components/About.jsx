@@ -4,6 +4,7 @@ function About() {
   var person2 = "https://markitup.in/assets/img/team/team-2.jpg";
   return (
     <div className="about-container">
+      {/* <h1 className="container-title">About Us</h1> */}
       <div className="about">
         <div className="about-content">
           <p className="content-small-title">WHO WE ARE</p>

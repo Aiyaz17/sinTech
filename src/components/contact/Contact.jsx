@@ -1,8 +1,13 @@
 import React, { Component } from "react";
 import Axios from "axios";
 import { withAlert } from "react-alert";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faEnvelope,faPhoneAlt,faGlobe,faMapMarker } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faEnvelope,
+  faPhoneAlt,
+  faGlobe,
+  faMapMarker,
+} from "@fortawesome/free-solid-svg-icons";
 
 // import message from "../../Images/message.svg";
 // import phone from "../../Images/phone.svg";
@@ -12,8 +17,8 @@ import { faEnvelope,faPhoneAlt,faGlobe,faMapMarker } from '@fortawesome/free-sol
 // import phone from "../../Images/phone.png";
 // import website from "../../Images/website.png";
 // import location from "../../Images/location.png";
-import "./Contact.css";
-import Meeting from "../Meeting/Meeting";
+import "./contact.css";
+import Meeting from "./Meeting";
 
 const REQUEST_BASE_URL = process.env.REACT_APP_REQUEST_BASE_URL;
 
@@ -224,19 +229,29 @@ class Contact extends Component {
             <this.SubmitButton />
             <div className="contact-info">
               <div className="contact-info-email contact-info-child">
-                <h1> <FontAwesomeIcon icon={faEnvelope} /></h1>
+                <h1>
+                  {" "}
+                  <FontAwesomeIcon icon={faEnvelope} />
+                </h1>
                 <p>sinplay@gmail.com</p>
               </div>
               <div className="contact-info-phone-number contact-info-child">
-                 <h1><FontAwesomeIcon icon={faPhoneAlt} /></h1>
-                 <p>+91 987654321</p>
+                <h1>
+                  <FontAwesomeIcon icon={faPhoneAlt} />
+                </h1>
+                <p>+91 987654321</p>
               </div>
               <div className="contact-info-website contact-info-child">
-               <h1> <FontAwesomeIcon icon={faGlobe} /></h1>
+                <h1>
+                  {" "}
+                  <FontAwesomeIcon icon={faGlobe} />
+                </h1>
                 <p>https://sinplay.com</p>
               </div>
               <div className="contact-info-address contact-info-child">
-                 <h1 className="location-icon"><FontAwesomeIcon icon={faMapMarker} /></h1>
+                <h1 className="location-icon">
+                  <FontAwesomeIcon icon={faMapMarker} />
+                </h1>
                 <p>Laxmi Nagar, New Delhi, India 11001</p>
               </div>
             </div>

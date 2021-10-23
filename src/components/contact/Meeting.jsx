@@ -6,7 +6,7 @@ import { withAlert } from "react-alert";
 
 import "react-datetime/css/react-datetime.css";
 // import "./Meeting.css";
-import "../contact/Contact";
+import "./contact.css";
 
 const REQUEST_BASE_URL = process.env.REACT_APP_REQUEST_BASE_URL;
 
