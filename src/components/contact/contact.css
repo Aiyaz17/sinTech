@@ -383,6 +383,7 @@ textarea {
 
 .dark-mode .contact_detail_container{
   background-color:#242526;
+  box-shadow: rgba(149, 157, 165, 0.2) 0px 0px 0px;
 }
 .dark-mode .contact-info-child h1,.dark-mode .contact-info p {
   color:white;

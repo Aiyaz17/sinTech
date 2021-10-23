@@ -5,6 +5,8 @@ import Services from "./Services";
 import Footer from "./Footer";
 import Contact from "./contact/Contact";
 import Chat from "./Chat/Chat";
+import TrustedBy from "./TrustedBy";
+import About from "./About";
 import { transitions, positions, Provider as AlertProvider } from "react-alert";
 import AlertTemplate from "react-alert-template-basic";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
@@ -28,6 +30,8 @@ function App() {
             <div>
               <Hero />
               <Services />
+              <TrustedBy />
+              <About />
               <Footer />
             </div>
           </Route>
