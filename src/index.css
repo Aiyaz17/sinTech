@@ -887,6 +887,10 @@ body.dark-mode {
     bottom: auto;
     left: 10px;
   }
+  .chat_widget .parent,
+  .chat_widget .child_phone {
+    left: 15px;
+  }
 }
 @media only screen and (max-width: 375px) {
   .nav-bar-innercontainer ul {
