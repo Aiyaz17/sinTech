@@ -47,7 +47,9 @@ function Services() {
 
   return (
     <div className="services-container">
-      <h1 className="container-title">Our Services</h1>
+      <h1 className="container-title" id="services" tabIndex="100">
+        Our Services
+      </h1>
       <div
         className="services"
         onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}

@@ -98,6 +98,8 @@ class Meeting extends Component {
 
   submitMeeting() {
     const alert = this.props.alert;
+    /* eslint-disable no-unused-vars */
+
     const { date, guest_email } = this.state;
     const state = this.state;
     let isValid = true;
@@ -192,13 +194,12 @@ class Meeting extends Component {
           </div>
           <div className="meeting_guest">
             <p>
+              <FontAwesomeIcon icon={faPlus} />
               <button
                 id="add"
                 className="add_guest_button"
                 onClick={this.createGuestInput}
-              >
-                <FontAwesomeIcon icon={faPlus} />
-              </button>
+              ></button>
               <label for="add"> Add guests </label>
             </p>
             <input

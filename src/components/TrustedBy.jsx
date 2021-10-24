@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import logo1 from "../Images/logos/logo1.svg";
 import logo2 from "../Images/logos/logo2.svg";

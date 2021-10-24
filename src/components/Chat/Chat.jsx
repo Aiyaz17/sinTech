@@ -54,7 +54,7 @@ class Chat extends Component {
               onClick={() => alert.show("you can call on 6565656565")}
             >
               <a href="tel:+919366309563">
-                <img src={Phone} style={{ display: "flex" }} />
+                <img src={Phone} style={{ display: "flex" }} alt="" />
               </a>
             </div>
           </>
@@ -65,7 +65,7 @@ class Chat extends Component {
             this.setState({ active: !active }, () => this.rotateParent())
           }
         >
-          <img id="parent_img" src={Message} />
+          <img id="parent_img" src={Message} alt="" />
         </div>
       </div>
     );
