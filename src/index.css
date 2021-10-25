@@ -885,11 +885,17 @@ body.dark-mode {
   ._2iWL7._1fOYS {
     top: 50px;
     bottom: auto;
-    left: 10px;
+    /* left: 10px; */
+    width: 90%;
+    margin: auto;
+    left: 0;
+    right: 0;
+    
   }
   .chat_widget .parent,
-  .chat_widget .child_phone {
-    left: 15px;
+  .chat_widget .child_phone,
+  ._1bpcM {
+    left: 15px !important;
   }
 }
 @media only screen and (max-width: 375px) {
