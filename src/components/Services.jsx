@@ -1,5 +1,7 @@
 import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+import Fade from "react-reveal/Fade";
+
 import SwiperCore, {
   Navigation,
   Autoplay,
@@ -47,36 +49,40 @@ function Services() {
 
   return (
     <div className="services-container">
-      <h1 className="container-title" id="services" tabIndex="100">
-        Our Services
-      </h1>
-      <div
-        className="services"
-        onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
-        onMouseLeave={() => {
-          swiperRef.current.swiper.autoplay.start();
-          var allLists = document.querySelectorAll(".items");
-          allLists.forEach((itemslist) => (itemslist.style.opacity = "0"));
-        }}
-      >
-        <Swiper
-          ref={swiperRef}
-          spaceBetween={10}
-          slidesPerView={3}
-          centeredSlides={true}
-          // navigation={true}
-          pagination={true}
-          loop={true}
-          autoplay={{ delay: 3000, disableOnInteraction: false }}
-          speed={500}
-          autoHeight={true}
-          breakpoints={breakpoints}
+      <Fade bottom duration={1500}>
+        <h1 className="container-title" id="services" tabIndex="100">
+          Our Services
+        </h1>
+      </Fade>
+      <Fade bottom duration={1500}>
+        <div
+          className="services"
+          onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
+          onMouseLeave={() => {
+            swiperRef.current.swiper.autoplay.start();
+            var allLists = document.querySelectorAll(".items");
+            allLists.forEach((itemslist) => (itemslist.style.opacity = "0"));
+          }}
         >
-          {cards.map((card) => (
-            <SwiperSlide>{card}</SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+          <Swiper
+            ref={swiperRef}
+            spaceBetween={10}
+            slidesPerView={3}
+            centeredSlides={true}
+            // navigation={true}
+            pagination={true}
+            loop={true}
+            autoplay={{ delay: 3000, disableOnInteraction: false }}
+            speed={500}
+            autoHeight={true}
+            breakpoints={breakpoints}
+          >
+            {cards.map((card) => (
+              <SwiperSlide>{card}</SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </Fade>
     </div>
   );
 }

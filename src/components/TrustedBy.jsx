@@ -1,4 +1,6 @@
 import React from "react";
+import Fade from "react-reveal/Fade";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import logo1 from "../Images/logos/logo1.svg";
 import logo2 from "../Images/logos/logo2.svg";
@@ -39,28 +41,32 @@ function TrustedBy() {
 
   return (
     <div className="trusted-container">
-      <h1 className="container-title">Trusted By</h1>
-      <div className="trusted">
-        <Swiper
-          // ref={swiperRef}
-          spaceBetween={10}
-          slidesPerView={5}
-          // centeredSlides={true}
-          pagination={true}
-          loop={true}
-          autoplay={{ delay: 5000, disableOnInteraction: false }}
-          speed={500}
-          autoHeight={false}
-          grabCursor={true}
-          breakpoints={breakpoints}
-        >
-          {logos.map((logo) => (
-            <SwiperSlide>
-              <img className="trusted-logo" src={logo} alt="trustedby-logo" />{" "}
-            </SwiperSlide>
-          ))}
-        </Swiper>
-      </div>
+      <Fade bottom duration={1500}>
+        <h1 className="container-title">Trusted By</h1>
+      </Fade>
+      <Fade bottom duration={1500}>
+        <div className="trusted">
+          <Swiper
+            // ref={swiperRef}
+            spaceBetween={10}
+            slidesPerView={5}
+            // centeredSlides={true}
+            pagination={true}
+            loop={true}
+            autoplay={{ delay: 5000, disableOnInteraction: false }}
+            speed={500}
+            autoHeight={false}
+            grabCursor={true}
+            breakpoints={breakpoints}
+          >
+            {logos.map((logo) => (
+              <SwiperSlide>
+                <img className="trusted-logo" src={logo} alt="trustedby-logo" />{" "}
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </Fade>
     </div>
   );
 }
