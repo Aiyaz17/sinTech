@@ -1,9 +1,11 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import person1 from "../Images/SVG/13.svg";
+import person2 from "../Images/SVG/14.svg";
 
 function About() {
-  var person1 = "https://markitup.in/assets/img/team/team-1.jpg";
-  var person2 = "https://markitup.in/assets/img/team/team-2.jpg";
+  // var person1 = "https://markitup.in/assets/img/team/team-1.jpg";
+  // var person2 = "https://markitup.in/assets/img/team/team-2.jpg";
   return (
     <div>
       <Fade bottom>
@@ -34,8 +36,8 @@ function About() {
                   <img src={person1} alt="name_of_person" />
                 </div>
                 <div className="about-details">
-                  <p className="about-card-name">Ishan Sharma</p>
-                  <p className="about-card-position">Co Founder</p>
+                  <p className="about-card-name">Subhash Arun Dwivedi</p>
+                  <p className="about-card-position">Co-Founder</p>
                   <p className="about-card-description">
                     YouTuber with 180K+ subscribers and experienced in making
                     content for multiple successful brands like Unacademy,
@@ -51,8 +53,8 @@ function About() {
                   <img src={person2} alt="name_of_person" />
                 </div>
                 <div className="about-details">
-                  <p className="about-card-name">Saransh Anand</p>
-                  <p className="about-card-position">Co Founder</p>
+                  <p className="about-card-name">Aayush Upadhayay</p>
+                  <p className="about-card-position">Co-Founder</p>
                   <p className="about-card-description">
                     Social media marketer with experience of growing an
                     eCommerce brand from zero to 20k+ followers. He is also a
