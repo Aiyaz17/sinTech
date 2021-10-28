@@ -229,7 +229,8 @@ body {
   -webkit-box-orient: vertical;
 }
 .container-title {
-  font-size: 40px;
+  /* font-size: 40px; */
+  font-size: 33px;
   line-height: 95%;
   color: var(--primary);
   text-align: center;
@@ -313,7 +314,7 @@ body {
 /* Toggle */
 .toggle {
   margin-right: 100px;
-  margin-left: 30px;
+  /* margin-left: 30px; */
 }
 
 *,
@@ -890,7 +891,6 @@ body.dark-mode {
     margin: auto;
     left: 0;
     right: 0;
-    
   }
   .chat_widget .parent,
   .chat_widget .child_phone,

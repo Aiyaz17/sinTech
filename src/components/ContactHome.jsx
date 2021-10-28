@@ -5,7 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 function ContactHome() {
   return (
-    <div className="contact-us">
+    <div className="contact-us" id="contact">
       <Fade bottom>
         <h1 className="container-title">Contact Us</h1>
       </Fade>

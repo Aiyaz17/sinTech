@@ -71,7 +71,7 @@ function Header() {
               // }}
               className="option"
             >
-              Our Services
+              Services
             </li>
           </HashLink>
           <HashLink
@@ -79,20 +79,19 @@ function Header() {
             to="/#about"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <li
-              // onClick={() => {
-              //   document
-              //     .querySelector(".about-container")
-              //     .scrollIntoView({ behavior: "smooth" });
-              // }}
-              className="option"
-            >
-              About
-            </li>
+            <li className="option">About</li>
+          </HashLink>
+          <HashLink
+            smooth
+            to="/#contact"
+            style={{ textDecoration: "none", color: "inherit" }}
+          >
+            <li className="option">Contact</li>
           </HashLink>
 
           <Link to="/contact" style={{ textDecoration: "none" }}>
-            <li className="contact-button">Contact Us</li>
+            <li className="contact-button">Schedule Meet</li>
+            {/* <li className="contact-button">Reach Us</li> */}
           </Link>
           <li>
             <div className="toggle">

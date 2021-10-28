@@ -12,21 +12,68 @@ import "swiper/swiper-bundle.min.css";
 import "swiper/components/navigation";
 import "swiper/swiper.esm";
 import VerticalCard from "./VerticalCard";
-import randomImg from "../Images/hero-img-min.png";
+import card1 from "../Images/SVG/1.svg";
+import card2 from "../Images/SVG/2.svg";
+import card3 from "../Images/SVG/3.svg";
+import card4 from "../Images/SVG/4.svg";
+import card5 from "../Images/SVG/5.svg";
+import card6 from "../Images/SVG/6.svg";
 SwiperCore.use([Navigation, Autoplay, EffectCoverflow, Pagination]);
 
 function Services() {
   const swiperRef = useRef(null);
   var cards = [];
-  for (var i = 0; i < 6; i++) {
-    cards.push(
-      <VerticalCard
-        title="This is a title"
-        img={randomImg}
-        body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
-      />
-    );
-  }
+  // for (var i = 0; i < 6; i++) {
+  //   cards.push(
+  //     <VerticalCard
+  //       title="This is a title"
+  //       img={randomImg}
+  //       body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
+  //     />
+  //   );
+  // }
+  cards.push(
+    <VerticalCard
+      title="This is a title"
+      img={card1}
+      body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
+    />
+  );
+  cards.push(
+    <VerticalCard
+      title="This is a title"
+      img={card2}
+      body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
+    />
+  );
+  cards.push(
+    <VerticalCard
+      title="This is a title"
+      img={card3}
+      body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
+    />
+  );
+  cards.push(
+    <VerticalCard
+      title="This is a title"
+      img={card4}
+      body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
+    />
+  );
+  cards.push(
+    <VerticalCard
+      title="This is a title"
+      img={card5}
+      body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
+    />
+  );
+  cards.push(
+    <VerticalCard
+      title="This is a title"
+      img={card6}
+      body="Nemo ut explicabo sunt est recusandae necessitatibus non quis,Nemo ut explicabo sunt est recusandae necessitatibus non quis"
+    />
+  );
 
   var breakpoints = {
     1024: {
@@ -69,13 +116,14 @@ function Services() {
             spaceBetween={10}
             slidesPerView={3}
             centeredSlides={true}
-            // navigation={true}
+            navigation={true}
             pagination={true}
             loop={true}
             autoplay={{ delay: 3000, disableOnInteraction: false }}
             speed={500}
             autoHeight={true}
             breakpoints={breakpoints}
+            slideToClickedSlide={true}
           >
             {cards.map((card) => (
               <SwiperSlide>{card}</SwiperSlide>

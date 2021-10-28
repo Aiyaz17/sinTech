@@ -1,5 +1,5 @@
 import React from "react";
-import heroImage from "../Images/hero-img-min.png";
+import heroImage from "../Images/SVG/main-page.svg";
 import Fade from "react-reveal/Fade";
 
 function Hero() {
