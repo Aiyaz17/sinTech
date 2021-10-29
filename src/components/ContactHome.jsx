@@ -2,6 +2,11 @@ import React from "react";
 import Fade from "react-reveal/Fade";
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faTwitter,
+  faInstagram,
+  faFacebookSquare,
+} from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 function ContactHome() {
   return (
@@ -40,6 +45,43 @@ function ContactHome() {
             </p>
           </div>
         </Fade>
+      </div>
+      <div className="logo-social">
+        <p className="nav-logo logo-social-logo" style={{ fontWeight: "bolder" }}>
+          Sinplay
+        </p>
+        <div className="logo">
+          <a
+            style={{ textDecoration: "none", color: "inherit" }}
+            href="https://google.com"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <p>
+              <FontAwesomeIcon icon={faTwitter} />
+            </p>
+          </a>
+          <a
+            style={{ textDecoration: "none", color: "inherit" }}
+            href="https://google.com"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <p>
+              <FontAwesomeIcon icon={faInstagram} />
+            </p>
+          </a>
+          <a
+            style={{ textDecoration: "none", color: "inherit" }}
+            href="https://google.com"
+            target={"_blank"}
+            rel="noreferrer"
+          >
+            <p>
+              <FontAwesomeIcon icon={faFacebookSquare} />
+            </p>
+          </a>
+        </div>
       </div>
     </div>
   );

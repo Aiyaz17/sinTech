@@ -93,6 +93,16 @@ function Services() {
       spaceBetween: 10,
     },
   };
+  // function rotate(e) {
+  //   // console.log({ a:  });
+  //   console.log(e);
+  //   if (e.clickedIndex !== e.activeIndex && e.activeIndex !== e.snapIndex) {
+  //     var activeSlide = document.querySelector(".swiper-slide-active");
+  //     activeSlide.addEventListener("click", () => {
+  //       activeSlide.style.transform = "rotateY(180deg)";
+  //     });
+  //   }
+  // }
 
   return (
     <div className="services-container">
@@ -124,6 +134,8 @@ function Services() {
             autoHeight={true}
             breakpoints={breakpoints}
             slideToClickedSlide={true}
+            // onClick={rotate}
+            updateOnWindowResize={true}
           >
             {cards.map((card) => (
               <SwiperSlide>{card}</SwiperSlide>

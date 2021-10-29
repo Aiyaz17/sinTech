@@ -42,7 +42,6 @@ function Header() {
         <Link to="/" style={{ textDecoration: "none" }}>
           <p
             className="nav-logo"
-            // onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           >
             Sinplay
           </p>

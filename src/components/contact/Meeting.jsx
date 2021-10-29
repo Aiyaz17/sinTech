@@ -193,14 +193,14 @@ class Meeting extends Component {
             />
           </div>
           <div className="meeting_guest">
-            <p>
-              <FontAwesomeIcon icon={faPlus} />
+            <p style={{ cursor: "pointer" }}>
+              <FontAwesomeIcon icon={faPlus} onClick={this.createGuestInput} />
               <button
                 id="add"
                 className="add_guest_button"
                 onClick={this.createGuestInput}
               ></button>
-              <label for="add"> Add guests </label>
+              <label for="add">Add guests</label>
             </p>
             <input
               type="text"

@@ -1,6 +1,5 @@
 * {
   font-family: "Nunito", sans-serif;
-  transition: all 0.75s;
 }
 :root {
   --primary: #012970;
@@ -406,7 +405,6 @@ textarea {
   margin-right: 10px;
   user-select: none;
 }
-
 
 /* ------------------ dark-mode --------------- */
 
