@@ -181,19 +181,24 @@ body {
   position: relative;
 }
 /* card  */
+.rotated-items {
+  display: none;
+}
 .vertical-card {
   width: 360px;
   height: fit-content;
+  min-height: 530px;
+  max-height: 530px;
   /* box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px; */
   box-shadow: 0px 0 30px rgb(0 0 0 / 10%);
   /* border-bottom: 1px solid rgb(228, 228, 228); */
-
   border-radius: 10px;
   margin: 0 20px;
   padding: 30px 10px;
   border: none;
   cursor: pointer;
   transition: all 0.3s;
+  transition: transform 0.8s;
   background-color: var(--white);
 }
 
@@ -240,7 +245,40 @@ body {
   text-align: center;
   padding-top: 100px;
 }
-
+.rotated.vertical-card {
+  transform: rotateY(180deg);
+  height: 520px;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+  padding: 30px 20px;
+  transition: all 0.3s;
+  transition: transform 0.8s;
+  text-align: center;
+}
+.rotated.vertical-card img,
+.rotated.vertical-card .card-text {
+  /* visibility: hidden; */
+  display: none;
+}
+.rotated .rotated-items {
+  display: block;
+  transform: rotateY(180deg);
+  overflow: hidden;
+  opacity: 0.8;
+  text-overflow: ellipsis;
+  font-weight: normal;
+  pointer-events: none;
+  list-style: none;
+}
+.rotated .rotated-items li {
+  margin: 8px;
+}
+.rotated .rotated-items .heading {
+  font-weight: bolder;
+  font-size: 25px;
+  text-align: center;
+  margin-bottom: 15px;
+}
 /* Swiper */
 
 .services .swiper-container {
@@ -258,9 +296,12 @@ body {
   /* filter: blur(0.1px); */
   border-radius: 10px;
 }
-.services .swiper-slide-active .vertical-card:hover {
+/* .services .swiper-slide-active .vertical-card:hover {
   transform: scale(1);
 }
+.services .swiper-slide-active .rotated.vertical-card:hover {
+  transform: none;
+} */
 .services .swiper-slide-active {
   transform: scale(1);
   transition: all 0.5s;
@@ -329,15 +370,19 @@ body {
 /* ----------- trusted by ----------- */
 .trusted-container {
   width: 100%;
+  transition: all 0.3s;
+
   margin-bottom: 100px;
 }
 .trusted {
   width: 65%;
   margin: 0 auto 0;
+  transition: all 0.3s;
 }
 .trusted-logo {
   max-width: 100px;
   opacity: 0.8;
+  transition: all 0.3s;
 }
 .trusted-container .container-title {
   margin-bottom: 50px;
@@ -520,7 +565,7 @@ body {
   margin-top: 10px;
 }
 .logo-social .logo p {
-  margin: 0 5px;
+  margin: 0 8px;
   opacity: 0.7;
   cursor: pointer;
   transition: all 0.3s !important;
@@ -529,6 +574,7 @@ body {
   color: #1c60ff;
   transition: all 0.3s !important;
   opacity: 1;
+  transform: scale(1.05);
 }
 /* ----------- Dark mode ----------- */
 

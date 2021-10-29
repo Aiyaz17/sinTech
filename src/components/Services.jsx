@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import Fade from "react-reveal/Fade";
 
@@ -21,6 +21,7 @@ import card6 from "../Images/SVG/6.svg";
 SwiperCore.use([Navigation, Autoplay, EffectCoverflow, Pagination]);
 
 function Services() {
+  const [cardClickedState, setCardClickedState] = useState(false);
   const swiperRef = useRef(null);
   var cards = [];
   // for (var i = 0; i < 6; i++) {
@@ -93,16 +94,16 @@ function Services() {
       spaceBetween: 10,
     },
   };
-  // function rotate(e) {
-  //   // console.log({ a:  });
-  //   console.log(e);
-  //   if (e.clickedIndex !== e.activeIndex && e.activeIndex !== e.snapIndex) {
-  //     var activeSlide = document.querySelector(".swiper-slide-active");
-  //     activeSlide.addEventListener("click", () => {
-  //       activeSlide.style.transform = "rotateY(180deg)";
-  //     });
-  //   }
-  // }
+  function cardClicked(e) {
+    // console.log(e.target);
+    if (!e.target.classList.contains("rotated")) {
+      setCardClickedState(true);
+      e.target.classList.add("rotated");
+    } else {
+      setCardClickedState(false);
+      e.target.classList.remove("rotated");
+    }
+  }
 
   return (
     <div className="services-container">
@@ -116,7 +117,7 @@ function Services() {
           className="services"
           onMouseEnter={() => swiperRef.current.swiper.autoplay.stop()}
           onMouseLeave={() => {
-            swiperRef.current.swiper.autoplay.start();
+            if (!cardClickedState) swiperRef.current.swiper.autoplay.start();
             var allLists = document.querySelectorAll(".items");
             allLists.forEach((itemslist) => (itemslist.style.opacity = "0"));
           }}
@@ -134,11 +135,11 @@ function Services() {
             autoHeight={true}
             breakpoints={breakpoints}
             slideToClickedSlide={true}
-            // onClick={rotate}
             updateOnWindowResize={true}
+            // onSlideChange={}
           >
             {cards.map((card) => (
-              <SwiperSlide>{card}</SwiperSlide>
+              <SwiperSlide onClick={cardClicked}>{card}</SwiperSlide>
             ))}
           </Swiper>
         </div>
