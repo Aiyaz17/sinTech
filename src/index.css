@@ -690,6 +690,11 @@ body.dark-mode {
 .dark-mode .line-height {
   opacity: 0.7;
 }
+@media only screen and (max-width: 1741px) {
+  .about-us-heading {
+    margin-bottom: 100px;
+  }
+}
 
 @media only screen and (max-width: 1441px) {
   .about {
@@ -707,11 +712,14 @@ body.dark-mode {
   .services {
     max-width: 80%;
   }
-  .about-us-heading {
+  /* .about-us-heading {
     margin-bottom: 100px;
-  }
+  } */
 }
 @media only screen and (max-width: 1025px) {
+  .about-us-heading {
+    margin-bottom: 0;
+  }
   .nav-bar-innercontainer {
     margin: 0 7% 0 7%;
   }
