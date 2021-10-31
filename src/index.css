@@ -46,7 +46,8 @@ body {
   margin: auto;
   font-family: "Nunito", sans-serif;
   font-weight: 700;
-  margin: 0 5% 0 15%;
+  margin: 0 3% 0 8%;
+  /* margin: 0 5% 0 15%; */
 }
 .nav-logo {
   display: flex;
