@@ -1,5 +1,6 @@
 import React from "react";
 import Fade from "react-reveal/Fade";
+import { HashLink } from "react-router-hash-link";
 import person1 from "../Images/SVG/13.svg";
 import person2 from "../Images/SVG/14.svg";
 
@@ -26,7 +27,13 @@ function About() {
                 from video production to graphic design to creating creative
                 memes that engage with the right audience.
               </p>
-              <p className="about-button contact-button">Contact Us</p>
+              <HashLink
+                smooth
+                to="/#contact"
+                style={{ textDecoration: "none", color: "inherit" }}
+              >
+                <p className="about-button contact-button">Contact Us</p>
+              </HashLink>
             </div>
           </Fade>
           <div className="team-members">

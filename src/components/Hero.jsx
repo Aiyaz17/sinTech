@@ -1,6 +1,7 @@
 import React from "react";
 import heroImage from "../Images/SVG/main-page.svg";
 import Fade from "react-reveal/Fade";
+import { Link } from "react-router-dom";
 
 function Hero() {
   return (
@@ -18,7 +19,10 @@ function Hero() {
               </h3>
             </Fade>
             <Fade bottom delay={1000} distance={"100px"}>
-              <p className="hero-button">Learn now</p>
+              <Link to="/contact" style={{ textDecoration: "none" }}>
+                <p className="hero-button">Schedule Meet</p>
+              </Link>
+              {/* <p className="hero-button">Learn now</p> */}
             </Fade>
           </div>
         </div>

@@ -90,13 +90,13 @@ function Header() {
             to="/#contact"
             style={{ textDecoration: "none", color: "inherit" }}
           >
-            <li className="option">Contact</li>
+            {/* <li className="option">Contact</li> */}
+            <li className="contact-button">Contact</li>
           </HashLink>
 
-          <Link to="/contact" style={{ textDecoration: "none" }}>
+          {/* <Link to="/contact" style={{ textDecoration: "none" }}>
             <li className="contact-button">Schedule Meet</li>
-            {/* <li className="contact-button">Reach Us</li> */}
-          </Link>
+          </Link> */}
           <li>
             <div className="toggle">
               <input

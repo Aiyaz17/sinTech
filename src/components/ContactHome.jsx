@@ -5,7 +5,8 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faTwitter,
   faInstagram,
-  faFacebookSquare,
+  // faFacebookSquare,
+  faLinkedin,
 } from "@fortawesome/free-brands-svg-icons";
 import { faEnvelope, faMapMarkerAlt } from "@fortawesome/free-solid-svg-icons";
 function ContactHome() {
@@ -47,8 +48,11 @@ function ContactHome() {
         </Fade>
       </div>
       <div className="logo-social">
-        <p className="nav-logo logo-social-logo" style={{ fontWeight: "bolder" }}>
-          Sinplay
+        <p
+          className="nav-logo logo-social-logo"
+          style={{ fontWeight: "bolder" }}
+        >
+          cosedge
         </p>
         <div className="logo">
           <a
@@ -78,7 +82,7 @@ function ContactHome() {
             rel="noreferrer"
           >
             <p>
-              <FontAwesomeIcon icon={faFacebookSquare} />
+              <FontAwesomeIcon icon={faLinkedin} />
             </p>
           </a>
         </div>
