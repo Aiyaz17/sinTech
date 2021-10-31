@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
 import logo1 from "../Images/SVG/logo1.svg";
 import logo2 from "../Images/SVG/logo2.svg";
+import logopng from "../Images/SVG/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 function Header() {
@@ -46,8 +47,8 @@ function Header() {
       <div className="nav-bar-innercontainer">
         <Link to="/" style={{ textDecoration: "none" }}>
           <p className="nav-logo">
-            <img className="logo-img" src={logo2} alt=""></img>
-            Cosedge
+            <img className="logo-img" src={logopng} alt=""></img>
+            cosedge
           </p>
         </Link>
         <ul className="options">

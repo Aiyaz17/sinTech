@@ -52,7 +52,7 @@ body {
   display: flex;
   font-size: 33px;
   font-family: "Nunito", sans-serif;
-  align-items: center;
+  align-items: flex-end;
   cursor: pointer;
   opacity: 0.95;
   transition: all 0.5s;
@@ -1021,4 +1021,9 @@ body.dark-mode {
     left: 5px;
     top: 20%;
   }
+}
+.logo-img {
+  max-width: 40px;
+  margin-right: 5px;
+  /* margin-bottom:8px; */
 }
