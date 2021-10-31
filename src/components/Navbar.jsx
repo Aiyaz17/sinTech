@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-
+import logo1 from "../Images/SVG/logo1.svg";
+import logo2 from "../Images/SVG/logo2.svg";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 function Header() {
@@ -13,6 +14,10 @@ function Header() {
       document.querySelector("#check").addEventListener("click", openCloseMenu);
       var allList = document.querySelectorAll(".nav-bar ul li");
       allList.forEach((li) => li.addEventListener("click", openCloseMenu));
+    }
+    if (window.matchMedia("(prefers-color-scheme: light)").matches == true) {
+      setDarkMode(true);
+      changed();
     }
   }, []);
 
@@ -40,10 +45,9 @@ function Header() {
     <div className="nav-bar">
       <div className="nav-bar-innercontainer">
         <Link to="/" style={{ textDecoration: "none" }}>
-          <p
-            className="nav-logo"
-          >
-            Sinplay
+          <p className="nav-logo">
+            <img className="logo-img" src={logo2} alt=""></img>
+            Cosedge
           </p>
         </Link>
         <ul className="options">
