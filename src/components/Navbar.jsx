@@ -15,7 +15,7 @@ function Header() {
       var allList = document.querySelectorAll(".nav-bar ul li");
       allList.forEach((li) => li.addEventListener("click", openCloseMenu));
     }
-    if (window.matchMedia("(prefers-color-scheme: light)").matches == true) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches == true) {
       setDarkMode(true);
       changed();
     }
