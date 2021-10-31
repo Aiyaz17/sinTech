@@ -707,6 +707,9 @@ body.dark-mode {
   .services {
     max-width: 80%;
   }
+  .about-us-heading {
+    margin-bottom: 100px;
+  }
 }
 @media only screen and (max-width: 1025px) {
   .nav-bar-innercontainer {
