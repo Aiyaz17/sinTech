@@ -731,6 +731,9 @@ body.dark-mode {
   .services {
     max-width: 95%;
   }
+  .inner-hero {
+    margin: 210px auto 0;
+  }
 }
 
 @media only screen and (max-width: 1441px) {
