@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { HashLink } from "react-router-hash-link";
-import logo1 from "../Images/SVG/logo1.svg";
-import logo2 from "../Images/SVG/logo2.svg";
+// import logo1 from "../Images/SVG/logo1.svg";
+// import logo2 from "../Images/SVG/logo2.svg";
 import logopng from "../Images/SVG/logo.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
@@ -16,7 +16,7 @@ function Header() {
       var allList = document.querySelectorAll(".nav-bar ul li");
       allList.forEach((li) => li.addEventListener("click", openCloseMenu));
     }
-    if (window.matchMedia("(prefers-color-scheme: dark)").matches == true) {
+    if (window.matchMedia("(prefers-color-scheme: dark)").matches === true) {
       setDarkMode(true);
       changed();
     }

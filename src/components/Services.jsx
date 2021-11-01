@@ -104,6 +104,18 @@ function Services() {
       e.target.classList.remove("rotated");
     }
   }
+  function slideChanged() {
+    var allRotatedCards = document.querySelector(".rotated");
+    console.log("i got fired");
+    try {
+      allRotatedCards.classList.remove("rotated");
+    } catch {}
+    // allRotatedCards.forEach((card) => {
+    // if (!card.parentElement.classList.contains("swiper-slide-active")) {
+    //   card.classList.remove("rotated");
+    // }
+    // });
+  }
 
   return (
     <div className="services-container">
@@ -136,7 +148,7 @@ function Services() {
             breakpoints={breakpoints}
             slideToClickedSlide={true}
             updateOnWindowResize={true}
-            // onSlideChange={}
+            onSlideChange={slideChanged}
           >
             {cards.map((card) => (
               <SwiperSlide onClick={cardClicked}>{card}</SwiperSlide>

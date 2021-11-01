@@ -249,18 +249,17 @@ body {
 .rotated.vertical-card {
   transform: rotateY(180deg);
   height: 520px;
-  transition: transform 0.8s;
   transform-style: preserve-3d;
   padding: 30px 20px;
   transition: all 0.3s;
-  transition: transform 0.8s;
+  transition: transform 1s;
   text-align: center;
 }
 .rotated.vertical-card img,
 .rotated.vertical-card .card-text {
-  /* visibility: hidden; */
   display: none;
 }
+
 .rotated .rotated-items {
   display: block;
   transform: rotateY(180deg);
@@ -270,6 +269,7 @@ body {
   font-weight: normal;
   pointer-events: none;
   list-style: none;
+  backface-visibility: hidden;
 }
 .rotated .rotated-items li {
   margin: 8px;
@@ -308,6 +308,7 @@ body {
   z-index: 1;
   /* filter: blur(0.1px); */
   border-radius: 10px;
+  perspective: 2200px;
 }
 /* .services .swiper-slide-active .vertical-card:hover {
   transform: scale(1);
@@ -738,7 +739,7 @@ body.dark-mode {
   .services {
     max-width: 95%;
   }
-  .contact-button {
+  .about .contact-button {
     margin-top: 30px;
   }
   /* .about-us-heading {
@@ -861,6 +862,9 @@ body.dark-mode {
   .contact_detail_container {
     padding: 50px 0;
   }
+  .toggle {
+    margin: auto;
+  }
   /* ----------- hamburger and its functioning ---------- */
   .hamburger {
     display: block;
@@ -924,6 +928,10 @@ body.dark-mode {
   }
 }
 @media only screen and (max-width: 425px) {
+  .swiper-button-next,
+  .swiper-button-prev {
+    display: none;
+  }
   .team-members {
     flex-direction: column;
     margin-top: 0;
@@ -935,7 +943,7 @@ body.dark-mode {
     margin-right: 0;
   }
   .hero-img {
-    max-width: 400px;
+    max-width: 340px;
     margin-top: 60px;
   }
   .address-email-container {
@@ -990,7 +998,7 @@ body.dark-mode {
     width: 99%;
   }
   .hero-img {
-    max-width: 340px;
+    max-width: 280px;
   }
   .card-img {
     max-height: 240px;
@@ -1010,7 +1018,7 @@ body.dark-mode {
 }
 @media only screen and (max-width: 325px) {
   .hero-img {
-    max-width: 320px;
+    max-width: 250px;
   }
   .about-card {
     width: 270px;
