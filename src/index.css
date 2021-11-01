@@ -733,6 +733,7 @@ body.dark-mode {
   }
   .hero .inner-hero {
     margin: 210px auto 0;
+    width: 70%;
   }
 }
 
