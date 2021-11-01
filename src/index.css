@@ -51,13 +51,15 @@ body {
 }
 .nav-logo {
   display: flex;
-  font-size: 33px;
+  /* font-size: 33px; */
+  font-size: 38px;
   font-family: "Nunito", sans-serif;
-  align-items: flex-end;
+  align-items: center;
   cursor: pointer;
   opacity: 0.95;
   transition: all 0.5s;
   color: var(--primary);
+  font-weight: bold;
 }
 
 .nav-bar-innercontainer ul {
@@ -65,7 +67,8 @@ body {
   display: flex;
   align-items: center;
   margin: 0 0 0 auto;
-  font-size: 20px;
+  /* font-size: 20px; */
+  font-size: 16px;
   color: var(--font2);
 }
 
@@ -80,7 +83,8 @@ body {
 }
 
 .contact-button {
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
+  background-color: #4c6fbf;
   padding: 10px 20px;
   line-height: 100%;
   color: var(--white);
@@ -102,10 +106,11 @@ body {
 
 .hero .inner-hero {
   display: flex;
-  width: 70%;
+  width: 90%;
   height: 500px;
   box-sizing: border-box;
-  margin: 210px auto 0;
+  /* margin: 210px auto 0; */
+  margin: 210px auto 0 160px;
 }
 .hero .text {
   display: flex;
@@ -115,6 +120,7 @@ body {
 }
 .hero .text-container {
   max-width: 80%;
+  margin-right: 250px;
 }
 .hero .title {
   font-size: 50px;
@@ -130,8 +136,9 @@ body {
 }
 
 .hero-button {
-  /* background-color: #5061ff; */
-  background-color: var(--secondary);
+  /* background-color: var(--secondary); */
+  background-color: #4c6fbf;
+
   padding: 22px 45px;
   width: fit-content;
   color: var(--white);
@@ -175,7 +182,8 @@ body {
   justify-content: center;
 }
 .services {
-  max-width: 65%;
+  /* max-width: 65%; */
+  max-width: 85%;
   height: max-content;
   margin: 0 auto;
   cursor: grab;
@@ -389,7 +397,8 @@ body {
   margin-bottom: 100px;
 }
 .trusted {
-  width: 65%;
+  /* width: 65%; */
+  width: 80%;
   margin: 0 auto 0;
   transition: all 0.3s;
 }
@@ -426,7 +435,8 @@ body {
 }
 .about {
   /* width: 1320px; */
-  width: 70%;
+  /* width: 70%; */
+  width: 80%;
   margin: 0 auto;
   display: flex;
   margin-top: 100px;
@@ -524,7 +534,8 @@ body {
 .address-email-container {
   display: flex;
   margin: 50px auto 60px;
-  width: 70%;
+  /* width: 70%; */
+  width: 80%;
 }
 .contact-us-address {
   flex: 1;
@@ -1054,10 +1065,7 @@ body.dark-mode {
   }
 }
 .logo-img {
-  /* max-width: 40px;
-  margin-right: 5px; */
-  /* margin-bottom:8px; */
-  max-width: 34px;
+  max-width: 60px;
   margin-right: 5px;
-  margin-bottom: 5px;
+  margin-bottom: -5px;
 }
