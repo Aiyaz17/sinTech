@@ -20,7 +20,7 @@ function Hero() {
             </Fade>
             <Fade bottom delay={1000} distance={"100px"}>
               <Link to="/contact" style={{ textDecoration: "none" }}>
-                <p className="hero-button">Schedule Meet</p>
+                <p className="hero-button">Schedule a Meet</p>
               </Link>
               {/* <p className="hero-button">Learn now</p> */}
             </Fade>

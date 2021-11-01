@@ -68,7 +68,7 @@ body {
   align-items: center;
   margin: 0 0 0 auto;
   /* font-size: 20px; */
-  font-size: 16px;
+  font-size: 18px;
   color: var(--font2);
 }
 
@@ -762,6 +762,9 @@ body.dark-mode {
   } */
 }
 @media only screen and (max-width: 1025px) {
+  .hero .text-container {
+    margin-right: 100px;
+  }
   .about-us-heading {
     margin-bottom: 0;
   }
@@ -808,6 +811,9 @@ body.dark-mode {
 }
 
 @media only screen and (max-width: 769px) {
+  .hero .text-container {
+    margin-right: 0;
+  }
   body {
     background-size: cover;
     background-position: 0px -80px;
