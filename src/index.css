@@ -724,14 +724,14 @@ body.dark-mode {
       color: black;
   }
 } */
-@media only screen and (max-width: 1741px) {
+@media only screen and (max-width: 1900px) {
   .about-us-heading {
     margin-bottom: 100px;
   }
   .services {
     max-width: 95%;
   }
-  .inner-hero {
+  .hero .inner-hero {
     margin: 210px auto 0;
   }
 }
